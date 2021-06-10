@@ -1,0 +1,433 @@
+[class*=pu_tooltip_] {
+    position: relative;
+    display: inline-block
+}
+
+[class*=pu_tooltip_]:before,
+[class*=pu_tooltip_]:after {
+    position: absolute;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000000;
+    pointer-events: none;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms
+}
+
+[class*=pu_tooltip_]:hover:before,
+[class*=pu_tooltip_]:hover:after {
+    visibility: visible;
+    opacity: 1
+}
+
+[class*=pu_tooltip_]:hover:before,
+[class*=pu_tooltip_]:hover:after {
+    -webkit-transition-delay: .1s;
+    transition-delay: .1s
+}
+
+[class*=pu_tooltip_]:before {
+    content: '';
+    position: absolute;
+    background: 0 0;
+    border: 7px solid transparent;
+    z-index: 1000001
+}
+
+[class*=pu_tooltip_]:after {
+    background: #000;
+    color: #fff;
+    padding: 8px 10px;
+    font-size: 14px;
+    line-height: 14px;
+    white-space: nowrap
+}
+
+[class*=pu_tooltip_][aria-label]:after {
+    content: attr(aria-label)
+}
+
+[class*=pu_tooltip_][data-pu_tooltip]:after {
+    content: attr(data-pu_tooltip)
+}
+
+[aria-label='']:before,
+[aria-label='']:after,
+[data-pu_tooltip='']:before,
+[data-pu_tooltip='']:after {
+    display: none !important
+}
+
+.pu_tooltip_top_left:before {
+    border-top-color: #000
+}
+
+.pu_tooltip_top_right:before {
+    border-top-color: #000
+}
+
+.pu_tooltip_top:before {
+    border-top-color: #000
+}
+
+.pu_tooltip_bottom_left:before {
+    border-bottom-color: #000
+}
+
+.pu_tooltip_bottom_right:before {
+    border-bottom-color: #000
+}
+
+.pu_tooltip_bottom:before {
+    border-bottom-color: #000
+}
+
+.pu_tooltip_left:before {
+    border-left-color: #000
+}
+
+.pu_tooltip_right:before {
+    border-right-color: #000
+}
+
+.pu_tooltip_top:before {
+    margin-bottom: -13px
+}
+
+.pu_tooltip_top:before,
+.pu_tooltip_top:after {
+    bottom: 100%;
+    left: 50%
+}
+
+.pu_tooltip_top:before {
+    left: calc(50% - 7px)
+}
+
+.pu_tooltip_top:after {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.pu_tooltip_top:hover:before {
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
+
+.pu_tooltip_top:hover:after {
+    -webkit-transform: translateX(-50%) translateY(-8px);
+    -ms-transform: translateX(-50%) translateY(-8px);
+    transform: translateX(-50%) translateY(-8px)
+}
+
+.pu_tooltip_bottom:before {
+    margin-top: -13px
+}
+
+.pu_tooltip_bottom:before,
+.pu_tooltip_bottom:after {
+    top: 100%;
+    left: 50%
+}
+
+.pu_tooltip_bottom:before {
+    left: calc(50% - 7px)
+}
+
+.pu_tooltip_bottom:after {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.pu_tooltip_bottom:hover:before {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px)
+}
+
+.pu_tooltip_bottom:hover:after {
+    -webkit-transform: translateX(-50%) translateY(8px);
+    -ms-transform: translateX(-50%) translateY(8px);
+    transform: translateX(-50%) translateY(8px)
+}
+
+.pu_tooltip_right:before {
+    margin-left: -13px;
+    margin-bottom: -7px
+}
+
+.pu_tooltip_right:after {
+    margin-bottom: -15px
+}
+
+.pu_tooltip_right:before,
+.pu_tooltip_right:after {
+    left: 100%;
+    bottom: 50%
+}
+
+.pu_tooltip_right:hover:before {
+    -webkit-transform: translateX(8px);
+    -ms-transform: translateX(8px);
+    transform: translateX(8px)
+}
+
+.pu_tooltip_right:hover:after {
+    -webkit-transform: translateX(8px);
+    -ms-transform: translateX(8px);
+    transform: translateX(8px)
+}
+
+.pu_tooltip_left:before {
+    margin-right: -13px;
+    margin-bottom: -7px
+}
+
+.pu_tooltip_left:after {
+    margin-bottom: -15px
+}
+
+.pu_tooltip_left:before,
+.pu_tooltip_left:after {
+    right: 100%;
+    bottom: 50%
+}
+
+.pu_tooltip_left:hover:before {
+    -webkit-transform: translateX(-8px);
+    -ms-transform: translateX(-8px);
+    transform: translateX(-8px)
+}
+
+.pu_tooltip_left:hover:after {
+    -webkit-transform: translateX(-8px);
+    -ms-transform: translateX(-8px);
+    transform: translateX(-8px)
+}
+
+.pu_tooltip_top_left:before {
+    margin-bottom: -13px
+}
+
+.pu_tooltip_top_left:before,
+.pu_tooltip_top_left:after {
+    bottom: 100%;
+    left: 50%
+}
+
+.pu_tooltip_top_left:before {
+    left: calc(50% - 7px)
+}
+
+.pu_tooltip_top_left:after {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+.pu_tooltip_top_left:after {
+    margin-left: 14px
+}
+
+.pu_tooltip_top_left:hover:before {
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
+
+.pu_tooltip_top_left:hover:after {
+    -webkit-transform: translateX(-100%) translateY(-8px);
+    -ms-transform: translateX(-100%) translateY(-8px);
+    transform: translateX(-100%) translateY(-8px)
+}
+
+.pu_tooltip_top_right:before {
+    margin-bottom: -13px
+}
+
+.pu_tooltip_top_right:before,
+.pu_tooltip_top_right:after {
+    bottom: 100%;
+    left: 50%
+}
+
+.pu_tooltip_top_right:before {
+    left: calc(50% - 7px)
+}
+
+.pu_tooltip_top_right:after {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.pu_tooltip_top_right:after {
+    margin-left: -14px
+}
+
+.pu_tooltip_top_right:hover:before {
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
+
+.pu_tooltip_top_right:hover:after {
+    -webkit-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px)
+}
+
+.pu_tooltip_bottom_left:before {
+    margin-top: -13px
+}
+
+.pu_tooltip_bottom_left:before,
+.pu_tooltip_bottom_left:after {
+    top: 100%;
+    left: 50%
+}
+
+.pu_tooltip_bottom_left:before {
+    left: calc(50% - 7px)
+}
+
+.pu_tooltip_bottom_left:after {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+.pu_tooltip_bottom_left:after {
+    margin-left: 14px
+}
+
+.pu_tooltip_bottom_left:hover:before {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px)
+}
+
+.pu_tooltip_bottom_left:hover:after {
+    -webkit-transform: translateX(-100%) translateY(8px);
+    -ms-transform: translateX(-100%) translateY(8px);
+    transform: translateX(-100%) translateY(8px)
+}
+
+.pu_tooltip_bottom_right:before {
+    margin-top: -13px
+}
+
+.pu_tooltip_bottom_right:before,
+.pu_tooltip_bottom_right:after {
+    top: 100%;
+    left: 50%
+}
+
+.pu_tooltip_bottom_right:before {
+    left: calc(50% - 7px)
+}
+
+.pu_tooltip_bottom_right:after {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+}
+
+.pu_tooltip_bottom_right:after {
+    margin-left: -14px
+}
+
+.pu_tooltip_bottom_right:hover:before {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px)
+}
+
+.pu_tooltip_bottom_right:hover:after {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px)
+}
+
+[class*=pu_tooltip_]:after {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .3)
+}
+
+.pu_tooltip_white:after {
+    color: #111;
+    background-color: #fff;
+    text-shadow: 0 -1px 0px #bfbfbf
+}
+
+.pu_tooltip_white.pu_tooltip_top_left:before {
+    border-top-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_top_right:before {
+    border-top-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_top:before {
+    border-top-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_bottom_left:before {
+    border-bottom-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_bottom_right:before {
+    border-bottom-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_bottom:before {
+    border-bottom-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_left:before {
+    border-left-color: #fff
+}
+
+.pu_tooltip_white.pu_tooltip_right:before {
+    border-right-color: #fff
+}
+
+.pu_tooltip_rounded:after {
+    border-radius: 4px
+}
+
+.pu_tooltip_no-animate:before,
+.pu_tooltip_no-animate:after {
+    -webkit-transition-duration: 0ms;
+    transition-duration: 0ms
+}
+
+.pu_tooltip_bounce:before,
+.pu_tooltip_bounce:after {
+    -webkit-transition: opacity .3s ease, visibility .3s ease, -webkit-transform .3s cubic-bezier(.71, 1.7, .77, 1.24);
+    transition: opacity .3s ease, visibility .3s ease, -webkit-transform .3s cubic-bezier(.71, 1.7, .77, 1.24);
+    transition: opacity .3s ease, visibility .3s ease, transform .3s cubic-bezier(.71, 1.7, .77, 1.24);
+    transition: opacity .3s ease, visibility .3s ease, transform .3s cubic-bezier(.71, 1.7, .77, 1.24), -webkit-transform .3s cubic-bezier(.71, 1.7, .77, 1.24)
+}
+
+.pu_tooltip_blue{
+    &.pu_tooltip_top:before {
+        border-top-color: $base_color;
+    }
+    &:after {
+        color: #fff;
+        background-color: $base_color;
+        text-shadow: 0 -1px 0px #bfbfbf;
+    }
+    &:hover{
+        i{
+            color: $base_color !important;
+        }
+    }
+}

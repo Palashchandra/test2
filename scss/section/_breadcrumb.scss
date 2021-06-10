@@ -1,0 +1,61 @@
+.sm_breadcrumb{
+    padding: 200px 0;
+    position: relative;
+    z-index: 1;
+    @media #{$tab}{
+        padding: 150px 0;
+    }
+    .title{
+        color: $white;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 66px;
+        margin-bottom: 23px;
+        @media #{$mobile}{
+            font-size: 32px;
+            line-height: 42px;
+            margin-bottom: 15px;
+        }
+        @media #{$tab_device}{
+            font-size: 35px;
+            line-height: 45px;
+            margin-bottom: 15px;
+        }
+        @media #{$medium_device}{
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 15px;
+        }
+    }
+    .description{
+        font-size: 20px;
+        font-weight: 400;
+        color: $white;
+        line-height: 30px;
+        @media #{$tab}{
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 25px;
+        }
+    }
+    .cloud_img_01{
+        position: absolute;
+        left: 20%;
+        bottom: 24%;
+        z-index: -1;
+        @media #{$mobile}{
+            max-width: 30%;
+            left: 6%;
+            bottom: 19%;
+        }
+    }
+    .cloud_img_02{
+        position: absolute;
+        right: 0%;
+        top: 20%;
+        z-index: -1;
+        @media #{$mobile}{
+            max-width: 30%;
+        }
+    }
+}

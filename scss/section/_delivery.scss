@@ -1,0 +1,53 @@
+.delivery_section{
+    @media #{$tab}{
+        background: #090A36 !important;
+    }
+    @media #{$medium_device}{
+        background: #090A36 !important;
+    }
+    &.sec_padding{
+        padding: 200px 0 400px;
+        @media #{$mobile}{
+            padding: 70px 0;
+        }
+        @media #{$tab_device}{
+            padding: 80px 0 400px;
+        }
+        @media #{$medium_device}{
+            padding: 100px 0 400px;
+        }
+    }
+}
+
+.sm_card_columns .card {
+    background-color: #22234B;
+    padding: 30px;
+    border-radius: 10px;
+    .card-body{
+        padding: 0;
+    }
+    .sm_card_icon{
+        height: 72px;
+        width: 72px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        background-color: rgba($color: #F84B83, $alpha: .04);
+        margin-bottom: 15px;
+        img{
+            max-width: 36px;
+        }
+    }
+    .title{
+        font-size: 25px;
+        font-weight: 500;
+        color: $white;
+        margin-bottom: 14px;
+    }
+    .description{
+        color: $white;
+        font-weight: 400;
+    }
+}

@@ -1,0 +1,118 @@
+.contact_section_wrapper{
+    .form-control{
+        border-radius: 4px;
+        background-color: rgba($color: $white, $alpha: 0.08); 
+        font-size: 16px;
+        color: rgba($color: #EAEDF0, $alpha: .8);
+        border: 0px solid transparent;
+        padding: 13px 20px;
+        margin-bottom: 6px;
+    }
+    textarea{
+        min-height: 137px;
+    }
+    .cu_btn {
+        padding: 18px 74px;
+        @media #{$mobile}{
+            margin-top: 15px;
+        }
+        @media #{$medium_device}{
+            padding: 18px 24px;
+        }
+        &:hover{
+            background-color: $white;
+            color: $base_color;
+            border-color: $white;
+        }
+    }
+    label.form-check-label {
+        color: #EAEDF0;
+        font-size: 18px;
+        font-weight: 400;
+        a{
+            color: $base_color;
+        }
+    }
+    .form-check-input{
+        background-color: transparent;
+        border: 1px solid #D1D5DF;
+    }
+    .form-check-input:focus{
+        box-shadow: none;
+    }
+}
+.contact_info_title{
+    .sub_title{
+        font-size: 18px;
+        font-weight: 400;
+        color: $base_color;
+        margin-bottom: 14px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 700;
+        color: $white;
+        img{
+            margin-right: 3px;
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    .pl_40{
+        padding-left: 40px;
+    }
+}
+.contact_info_title {
+    margin-top: 18px;
+    @media #{$tab}{
+        margin-top: 60px;
+    }
+}
+.contact_info_wrapper{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    @media #{$xs_mobile}{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact_info_inner{
+        background-color: #1C1D46;
+        padding: 30px 40px;
+        border-radius: 10px;
+        @media #{$mobile}{
+            margin-bottom: 30px;
+            padding: 20px 25px;
+        }
+        img{
+            margin-bottom: 24px;
+        }
+        .title{
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 12px;
+            color: $white;
+        }
+        p{
+            font-size: 16px;
+            color: $white;
+            line-height: 24px;
+            margin-bottom: 23px;
+            font-weight: 400;
+            @media #{$mobile}{
+                margin-bottom: 15px;
+            }
+        }
+        a{
+            font-size: 16px;
+            color: $white;
+            font-weight: 400;
+            @media #{$mobile}{
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
